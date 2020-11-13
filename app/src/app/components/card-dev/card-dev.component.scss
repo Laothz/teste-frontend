@@ -1,0 +1,86 @@
+.div-card {
+    background-color: #1a202c;
+    width: 295px;
+    margin: 40px 10px 10px 10px;
+    position: relative;
+    color: white;
+    padding: 10px;
+
+    &:hover > .div-icons-card{
+        visibility: visible;
+    }
+
+    .div-image-card{
+        width: 65px;
+        height: 65px;
+        border-radius: 50%;
+        position: absolute;
+        right: 15px;
+        top: -25px;
+        border: 2px solid #1a202c;
+
+        img {
+            width: 100%;
+            border-radius: 50%;
+
+        }
+    }
+
+    .div-p-card {
+        margin-top: 35px;
+        p {
+            font-size: 12px;
+            margin-bottom: 4px;
+        }
+        .p-light {
+            font-weight: 300;
+        }
+    }
+
+    .div-icons-card{
+        visibility: hidden;
+        display: flex;
+        justify-content: space-between;
+
+        a{
+            color: #48bb78;
+            align-items: center;
+            display: flex;
+            font-size: 14px;
+        }
+
+        .icons{
+            display: flex;
+            align-items: center;
+
+            button{
+                background: transparent;
+                border: none;
+                padding: 0;
+                margin: 0;
+                outline: none;
+
+                i{
+                    padding: 10px;
+                    font-size: 20px;
+                    color: white;
+                }
+            }
+
+            #button-edit{
+
+                i{
+                    color: #4299e1;
+                }
+            }
+
+            #button-delete{
+                
+                i{
+                    color: #e53e3e;
+                }
+            }
+        }
+    }
+
+}

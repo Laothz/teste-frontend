@@ -1,0 +1,105 @@
+.div-form{
+    padding: 30px;
+    background-color: white;
+    margin: -20px auto;
+    box-shadow: 0 0 15px rgba($color: #3a393961, $alpha: .38);
+    max-width: 420px;
+
+    .text-input-invalid{
+        color: red;
+        font-size: 12px;
+        margin: 5px 0 5px 0;
+    }
+
+    .invalid-input {
+        border: 2px solid red !important;
+    }
+
+    .button-git{
+        background: transparent;
+        border: 2px solid #1a202c;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #1a202c;
+
+        i {
+            font-size: 25px;
+            padding-right: 8px;
+        }
+
+        &:hover{
+            background-color: #1a202c;
+            color: white;
+        }
+    }
+
+    .git-button-active{
+        background-color: #1a202c;
+        color: white;
+    }
+
+    .div-input{
+        margin-top: 11px;
+
+        label {
+            font-size: 12px;
+            margin-bottom: 6px;
+        }
+
+        input {
+            padding: 0 10px;
+            height: 45px;
+            border: 2px solid #a0aec0;
+            color: #1a202c;
+
+            &:focus {
+                border-color: #1a202c;
+            }
+
+            &:disabled {
+                background-color: #cfd8e3;
+            }
+
+        }
+        textarea {
+            padding: 10px;
+            height: 180px;
+            border: 2px solid #a0aec0;
+            resize: none;
+            color: #1a202c;
+
+            &:focus {
+                border-color: #1a202c;
+            }
+
+            &:disabled {
+                background-color: #cfd8e3;
+            }
+        }
+    }
+
+    .div-separator{
+        height: 1px;
+        background-color: #d6d6d6;
+        margin-top: 30px;
+    }
+
+    h5 {
+        text-transform: uppercase;
+        margin-top: 23px;
+        text-align: center;
+        color: #1a202c;
+    }
+
+    .button-register{
+        background: #48bb78;
+        border: 2px solid #3ea268;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 11px;
+        color: #1e4c31;
+        outline: none;
+    }
+}

@@ -1,0 +1,13 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <div class="row p-0">
+        <div class="col-5 p-0">
+            <app-register-form></app-register-form>
+        </div>
+        <div class="col-7 p-0 d-flex justify-content-center">
+            <div *ngFor="let dev of developers">
+                <app-card-dev devs="dev"></app-card-dev>
+            </div>
+        </div>
+    </div>
+</div>

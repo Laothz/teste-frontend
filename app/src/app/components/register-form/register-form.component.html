@@ -1,0 +1,96 @@
+<div class="div-form border-radius-2">
+    <button type="button" class="button-git w-100 py-2 border-radius-2" [ngClass]="{ 'git-button-active': !inputGit }" (click)="ativarDesativarGitInput()">
+        <i class="fa fa-github" aria-hidden="true"></i>
+        Cadastrar com Github
+    </button>
+    <div class="div-input">
+        <label for="">Usuário Github</label>
+        <input type="text" class="w-100" [disabled]="inputGit">
+    </div>
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <div class="div-separator w-100"></div>
+
+        <div class="div-input">
+            <label for="">Avatar (URL)</label>
+            <input type="text" class="w-100" formControlName="avatarUrl" [ngClass]="{ 
+                'invalid-input': registerForm.controls['avatarUrl'].invalid && 
+                (registerForm.controls['avatarUrl'].dirty || 
+                registerForm.controls['avatarUrl'].touched) 
+            }">
+            <p class="text-input-invalid" *ngIf="
+            registerForm.controls['avatarUrl'].invalid && 
+            (registerForm.controls['avatarUrl'].dirty || 
+            registerForm.controls['avatarUrl'].touched)">Campo obrigatório!</p>
+        </div>
+        <div class="div-input">
+            <label for="">Nome</label>
+            <input type="text" class="w-100" formControlName="nome" [ngClass]="{ 
+                'invalid-input': registerForm.controls['nome'].invalid && 
+                (registerForm.controls['nome'].dirty || 
+                registerForm.controls['nome'].touched) 
+            }">
+            <p class="text-input-invalid" *ngIf="
+            registerForm.controls['nome'].invalid && 
+            (registerForm.controls['nome'].dirty || 
+            registerForm.controls['nome'].touched)">Campo obrigatório!</p>
+        </div>
+        <div class="div-input">
+            <label for="">E-mail</label>
+            <input type="text" class="w-100" formControlName="email" [ngClass]="{ 
+                'invalid-input': registerForm.controls['email'].invalid && 
+                (registerForm.controls['email'].dirty || 
+                registerForm.controls['email'].touched) 
+            }">
+            <p class="text-input-invalid" *ngIf="
+            registerForm.controls['email'].invalid && 
+            (registerForm.controls['email'].dirty || 
+            registerForm.controls['email'].touched)">Campo obrigatório!</p>
+        </div>
+        <div class="div-input">
+            <label for="">Cidade</label>
+            <input type="text" class="w-100" formControlName="cidade" [ngClass]="{ 
+                'invalid-input': registerForm.controls['cidade'].invalid && 
+                (registerForm.controls['cidade'].dirty || 
+                registerForm.controls['cidade'].touched) 
+            }">
+            <p class="text-input-invalid" *ngIf="
+            registerForm.controls['cidade'].invalid && 
+            (registerForm.controls['cidade'].dirty || 
+            registerForm.controls['cidade'].touched)">Campo obrigatório!</p>
+        </div>
+
+        <div class="div-separator w-100"></div>
+
+        <h5>Profissional</h5>
+
+        <div class="div-input">
+            <label for="">Formação</label>
+            <input type="text" class="w-100" formControlName="formacao" [ngClass]="{ 
+                'invalid-input': registerForm.controls['formacao'].invalid && 
+                (registerForm.controls['formacao'].dirty || 
+                registerForm.controls['formacao'].touched) 
+            }">
+            <p class="text-input-invalid" *ngIf="
+            registerForm.controls['formacao'].invalid && 
+            (registerForm.controls['formacao'].dirty || 
+            registerForm.controls['formacao'].touched)">Campo obrigatório!</p>
+        </div>
+
+        <div class="div-input">
+            <label for="">Tecnologias</label>
+            <textarea type="text" class="w-100" placeholder="ex: HTML/CSS, Vue, Angular etc." formControlName="tecnologias" [ngClass]="{ 
+                'invalid-input': registerForm.controls['tecnologias'].invalid && 
+                (registerForm.controls['tecnologias'].dirty || 
+                registerForm.controls['tecnologias'].touched) 
+            }"></textarea>
+            <p class="text-input-invalid" *ngIf="
+            registerForm.controls['tecnologias'].invalid && 
+            (registerForm.controls['tecnologias'].dirty || 
+            registerForm.controls['tecnologias'].touched)">Campo obrigatório!</p>
+        </div>
+        <button type="submit" class="button-register w-100 py-2 border-radius-2">
+            Cadastrar
+        </button>
+
+    </form>
+</div>

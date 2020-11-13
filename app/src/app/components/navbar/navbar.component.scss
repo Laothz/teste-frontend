@@ -1,0 +1,24 @@
+header{
+    height: 100px;
+    background-color: #1a202c;
+    color: white;
+    display: flex;
+    align-items: center;
+
+    h2{
+        font-weight: bold;
+        margin: auto;
+        width: fit-content;
+        position: relative;
+
+        &::before{
+            content: "";
+            position: absolute;
+            width: 5px;
+            height: 26px;
+            background-color: #4fd1c5;
+            bottom: 6px;
+            left: -9px;
+        }
+    }
+}
